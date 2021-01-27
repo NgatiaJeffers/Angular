@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+body {
+    margin: 0;
+    font-family: "Poppins", Gotham Rounded, sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #3E4347;
+    padding: 1em 0;
+}
+
+nav {
+    float: right;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    transition: 2s ease-in-out;
+}
+.logo {
+    font-weight: bold;
+    color: white;
+}
+
+h1 {
+    margin-top: 2em;
+}
