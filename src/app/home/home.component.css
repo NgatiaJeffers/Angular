@@ -17,3 +17,14 @@ input {
     padding: 1em;
     margin-bottom: 2em;
 }
+
+.active {
+    background-color: #43473e;
+    border: 3px solid black;
+    color: lightgrey;
+}
+
+.notactive {
+    background-color: lightgrey;
+    border: 3px solid black;
+}
