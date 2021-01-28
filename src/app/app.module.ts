@@ -10,6 +10,7 @@ import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { StrikethroughDirective } from './strikethrough.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ListComponent,
     GoalComponent,
-    GoalDetailComponent
+    GoalDetailComponent,
+    StrikethroughDirective
   ],
   imports: [
     BrowserModule,
