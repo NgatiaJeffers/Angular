@@ -1,7 +1,9 @@
+import { Quote } from './../quote-class/quote';
 import { Component, OnInit } from '@angular/core';
 import { GoalService } from '../goal-service/goal.service';
 import { Goal } from '../goal';
 import { AlertService } from '../alert-service/alert.service';
+import { QuoteRequestService } from '../quote-http/quote-request.service';
 
 @Component({
   selector: 'app-goal',
@@ -9,6 +11,8 @@ import { AlertService } from '../alert-service/alert.service';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {  
+
+  quote:Quote;
 
   goals: Goal[];
   alertService:AlertService;
@@ -42,12 +46,15 @@ export class GoalComponent implements OnInit {
   }
 
 
-  constructor(goalsService:GoalService, alertService:AlertService) {
+  constructor(goalsService:GoalService, alertService:AlertService, private quoteService:QuoteRequestService) {
     this.goals = goalsService.getGoals()
     this.alertService = alertService;
   }
 
   ngOnInit(): void {
+
+    this.quoteService.quoteRequest()
+    this.quote = this.quoteService.quote
   }
 
 }
