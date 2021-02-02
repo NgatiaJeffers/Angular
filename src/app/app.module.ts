@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { CarComponent } from './car/car.component';
+import { GoalFormComponent } from './goal-form/goal-form.component';
+import { QuoteComponent } from './quote/quote.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { DateCountPipe } from './date-count.pipe';
     GoalComponent,
     GoalDetailComponent,
     StrikethroughDirective,
-    DateCountPipe
+    DateCountPipe,
+    CarComponent,
+    GoalFormComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,
