@@ -5,12 +5,18 @@ import { Goal } from '../goal';
 import { AlertService } from '../alert-service/alert.service';
 import { QuoteRequestService } from '../quote-http/quote-request.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-goal',
   templateUrl: './goal.component.html',
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {  
+
+  goToUrl(id) {
+    this.router.navigate(['/goals',id])
+  }
 
   quote:Quote;
 
@@ -35,18 +41,16 @@ export class GoalComponent implements OnInit {
     }
   }
 
-  deleteGoal(isComplete, index) {
-    if(isComplete) {
+  deleteGoal(index) {
       let toDelete = confirm(`Are you sure you want to delete ${this.goals[index].name}?`)
       if(toDelete) {
         this.goals.splice(index, 1)
-        this.alertService.alertMe("This goal has been deleted")
+        this.alertService.alertMe("Goal has been deleted")
       }
-    }
   }
 
 
-  constructor(goalsService:GoalService, alertService:AlertService, private quoteService:QuoteRequestService) {
+  constructor(goalsService:GoalService, alertService:AlertService, private quoteService:QuoteRequestService, private router:Router) {
     this.goals = goalsService.getGoals()
     this.alertService = alertService;
   }

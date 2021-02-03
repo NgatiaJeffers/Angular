@@ -1,4 +1,4 @@
-button{
+/* button{
 	width: 130px;
     height: 50px;
     background-color: #43473e;
@@ -6,4 +6,8 @@ button{
     border-radius: 5px;
     color: white;
     font-size: .8em;
+} */
+
+.btn {
+    margin: 2px;
 }

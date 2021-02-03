@@ -35,8 +35,14 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-    transition: 2s ease-in-out;
+    transition: 1s ease-in-out;
+    color: lightgrey;
 }
+
+nav ul li a:active {
+    text-decoration: underline;
+}
+
 .logo {
     font-weight: bold;
     color: white;

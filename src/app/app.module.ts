@@ -18,6 +18,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { CarComponent } from './car/car.component';
 import { GoalFormComponent } from './goal-form/goal-form.component';
 import { QuoteComponent } from './quote/quote.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { QuoteComponent } from './quote/quote.component';
     DateCountPipe,
     CarComponent,
     GoalFormComponent,
-    QuoteComponent
+    QuoteComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
